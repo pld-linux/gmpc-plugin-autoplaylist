@@ -1,6 +1,6 @@
-#
 %define		source_name gmpc-autoplaylist
 Summary:	Autoplaylist plugin for Gnome Music Player Client
+Summary(pl):	Wtyczka autoplaylist dla odtwarzacza Gnome Music Player Client
 Name:		gmpc-plugin-autoplaylist
 Version:	0.1.0
 Release:	1
@@ -14,14 +14,18 @@ URL:		http://sarine.nl/gmpc-plugins-autoplaylist
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gmpc-devel
-BuildRequires:	gtk+2-devel >= 2.4
+BuildRequires:	gtk+2-devel >= 2:2.4
 BuildRequires:	libglade2-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The plugin allows you to generate a playlist based on a set of rules, f.e.
-"Genre contains 'jazz' and artist doesn't contain 'Jones'".
+The plugin allows you to generate a playlist based on a set of rules,
+f.e. "Genre contains 'jazz' and artist doesn't contain 'Jones'".
+
+%description -l pl
+Ta wtyczka pozwala generowaæ playlisty w oparciu o zbiór regu³, na
+przyk³ad "Gatunek zawiera 'jazz' i wykonawca nie zawiera 'Jones'".
 
 %prep
 %setup -qn %{source_name}-%{version}
@@ -46,7 +50,6 @@ install -d $RPM_BUILD_ROOT%{_libdir}/gmpc
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm $RPM_BUILD_ROOT%{_libdir}/gmpc/*.la
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT

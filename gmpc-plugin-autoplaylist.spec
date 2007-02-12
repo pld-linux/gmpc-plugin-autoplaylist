@@ -1,6 +1,6 @@
 %define		source_name gmpc-autoplaylist
 Summary:	Autoplaylist plugin for Gnome Music Player Client
-Summary(pl.UTF-8):   Wtyczka autoplaylist dla odtwarzacza Gnome Music Player Client
+Summary(pl.UTF-8):	Wtyczka autoplaylist dla odtwarzacza Gnome Music Player Client
 Name:		gmpc-plugin-autoplaylist
 Version:	0.1.0
 Release:	1

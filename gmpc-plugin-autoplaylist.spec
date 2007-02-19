@@ -2,7 +2,7 @@
 Summary:	Autoplaylist plugin for Gnome Music Player Client
 Summary(pl.UTF-8):	Wtyczka autoplaylist dla odtwarzacza Gnome Music Player Client
 Name:		gmpc-plugin-autoplaylist
-Version:	0.1.0
+Version:	0.14.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
@@ -13,7 +13,7 @@ Patch0:		%{name}-plugins_path.patch
 URL:		http://sarine.nl/gmpc-plugins-autoplaylist
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gmpc-devel
+BuildRequires:	gmpc-devel >= 0.14.0
 BuildRequires:	gtk+2-devel >= 2:2.4
 BuildRequires:	libglade2-devel
 BuildRequires:	libtool

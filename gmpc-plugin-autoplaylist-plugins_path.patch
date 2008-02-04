@@ -1,29 +1,20 @@
---- gmpc-autoplaylist-0.14.0/glade/Makefile.am.wig	2007-02-18 01:13:40.000000000 +0100
-+++ gmpc-autoplaylist-0.14.0/glade/Makefile.am	2007-02-19 22:53:23.000000000 +0100
-@@ -1,4 +1,4 @@
--appgladedir = $(datadir)/gmpc/plugins/apl/
-+appgladedir = $(libdir)/gmpc/apl/
- appglade_DATA =	apl.glade 
- 
- EXTRA_DIST = apl.glade 
---- gmpc-autoplaylist-0.14.0/src/Makefile.am.wig	2007-02-18 01:13:39.000000000 +0100
-+++ gmpc-autoplaylist-0.14.0/src/Makefile.am	2007-02-19 22:55:07.000000000 +0100
+diff -urN gmpc-autoplaylist-0.15.5.0/src/Makefile.am gmpc-autoplaylist-0.15.5.0.new/src/Makefile.am
+--- gmpc-autoplaylist-0.15.5.0/src/Makefile.am	2007-11-29 14:53:13.000000000 +0100
++++ gmpc-autoplaylist-0.15.5.0.new/src/Makefile.am	2008-02-04 10:15:01.833979423 +0100
 @@ -1,6 +1,6 @@
 -libdir=${prefix}/share/gmpc/plugins
-+pluginsdir=$(libdir)/gmpc
++pluginsdir=$(libdir)/gmpc/
  
 -lib_LTLIBRARIES = libautoplaylist.la
 +plugins_LTLIBRARIES = libautoplaylist.la
  
  libautoplaylist_la_SOURCES=\
  	main.c
-@@ -9,9 +9,3 @@
- libautoplaylist_la_LIBADD= @gmpcautoplaylist_LIBS@
- libautoplaylist_la_CFLAGS= @gmpcautoplaylist_CFLAGS@ -Wall -Wmissing-declarations
- libautoplaylist_la_LDFLAGS= -module -avoid-version 
--
--install:
--	@$(MAKE)
--	mkdir -p ${DESTDIR}${libdir}
+@@ -13,5 +13,5 @@
+ install:
+ 	@$(MAKE)
+ 	mkdir -p ${DESTDIR}${libdir}
 -	if test -f .libs/libautoplaylist.so; then cp .libs/libautoplaylist.so ${DESTDIR}${libdir}; fi
 -	if test -f .libs/libautoplaylist.dll; then cp .libs/libautoplaylist.dll ${DESTDIR}${libdir}; fi
++	if test -f .libs/libautoplaylist.so; then cp .libs/libautoplaylist.so ${DESTDIR}${pluginsdir}; fi
++	if test -f .libs/libautoplaylist.dll; then cp .libs/libautoplaylist.dll ${DESTDIR}${pluginsdir}; fi

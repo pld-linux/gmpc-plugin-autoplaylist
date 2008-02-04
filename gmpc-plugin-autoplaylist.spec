@@ -6,7 +6,7 @@ Version:	0.15.5.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-# http://sarine.nl/gmpc-plugins-downloads
+# http://download.sarine.nl/gmpc-0.15.5/
 Source0:	http://download.sarine.nl/gmpc-0.15.5/%{source_name}-%{version}.tar.gz
 # Source0-md5:	4503b2652b047ea410afdf5ac091df38
 Patch0:		%{name}-plugins_path.patch
